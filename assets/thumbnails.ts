@@ -1,0 +1,8 @@
+export const thumb1 = "/thumbnails/thumb-1.jpg"
+export const thumb2 = "/thumbnails/thumb-2.jpg"
+export const thumb3 = "/thumbnails/thumb-3.jpg"
+export const thumb4 = "/thumbnails/thumb-4.jpg"
+export const thumb5 = "/thumbnails/thumb-5.jpg"
+export const thumb6 = "/thumbnails/thumb-6.jpg"
+export const thumb7 = "/thumbnails/thumb-7.jpg"
+export const thumb8 = "/thumbnails/thumb-8.jpg"

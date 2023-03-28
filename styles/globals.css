@@ -1,0 +1,27 @@
+body {
+    background : black;
+    color : white;
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root{
+        --background : black;
+        --component-background : #0F172A;
+        --white : white;
+        --border : #1E293B;
+        --gray-shade: #1E293B;
+        --accent : #2962FF;
+        --gradient : 110.31deg, #24429C 15.39%, #8638EA 84.61%;
+        --red : #DC2826;
+        --yellow: #EAB307;
+        --twitter-color : #1DA1F2;
+        --green : #14532D;
+        --canvas-data :  #95A3B8;
+    }
+}

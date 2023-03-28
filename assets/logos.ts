@@ -1,0 +1,1 @@
+export const logo_dark = "/logos/logo-dark.png"

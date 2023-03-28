@@ -1,7 +1,11 @@
 {
     "cSpell.words": [
+        "chall",
+        "Hackathons",
         "Hashnode",
         "Mawit",
-        "Mawit's"
-    ]
+        "Mawit's",
+        "tailwindcss"
+    ],
+    "editor.formatOnSave": true
 }

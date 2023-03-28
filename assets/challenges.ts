@@ -1,0 +1,5 @@
+export const chall1 = "/challenges/chall-1.png"
+export const chall2 = "/challenges/chall-2.png"
+export const chall3 = "/challenges/chall-3.png"
+export const chall4 = "/challenges/chall-4.png"
+export const chall5 = "/challenges/chall-5.png"

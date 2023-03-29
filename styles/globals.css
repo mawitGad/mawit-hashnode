@@ -16,7 +16,7 @@ body {
         --component-background : #0F172A;
         --white : white;
         --border : #1E293B;
-        --gray-shade: #1E293B;
+        --gray-shade: #cfefFE80;
         --accent : #2962FF;
         --gradient : 110.31deg, #24429C 15.39%, #8638EA 84.61%;
         --red : #DC2826;
@@ -27,5 +27,9 @@ body {
         --my-feed-blue : #3C82F6;
         --rix-gray : #CBD5E2;
         --header-write-color : #2563EB;
+        --twitter-logo : #00acee;
+        --linkedin-logo : #0077b5;
+        --instagram-logo : #e12689;
+        --discord-logo : #5664f1;
     }
 }

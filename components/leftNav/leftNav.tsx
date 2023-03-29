@@ -7,7 +7,7 @@ const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] })
 export function LeftNav() {
 
     return (
-        <div className="max-w-[242px] bg-component_background border-border rounded-[8px] border py-[16px]">
+        <div className="max-w-[242px] bg-component_background border-border rounded-[8px] border py-[16px] h-fit sticky top-[20px]">
             <div >
                 <div className="flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
                     <ExploreIcon />

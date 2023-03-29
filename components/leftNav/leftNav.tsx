@@ -9,27 +9,27 @@ export function LeftNav() {
     return (
         <div className="max-w-[242px] bg-component_background border-border rounded-[8px] border py-[16px] h-fit sticky top-[20px]">
             <div >
-                <div className="flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
+                <div className="cursor-pointer flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
                     <ExploreIcon />
                     <span className="ml-4">Explore</span>
                 </div>
-                <div className="flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
+                <div className="cursor-pointer flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
                     <DraftsIcon />
                     <span className="ml-4">Drafts</span>
                 </div>
-                <div className="flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
+                <div className="cursor-pointer flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
                     <BookmarksIcon />
                     <span className="ml-4">Bookmarks</span>
                 </div>
-                <div className="flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
+                <div className="cursor-pointer flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
                     <HackathonsIcon />
                     <span className="ml-4">Hackathons</span>
                 </div>
-                <div className="flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
+                <div className="cursor-pointer flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
                     <TeamBlogsIcon />
                     <span className="ml-4">Team Blog</span>
                 </div>
-                <div className="flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
+                <div className="cursor-pointer flex items-center px-[16px] py-[8px] hover:bg-[#afcfff40]">
                     <MoreIcon />
                     <span className="ml-4">More</span>
                 </div>
@@ -43,31 +43,31 @@ export function LeftNav() {
                     <TrendingTagIcon className="w-[20px] h-[20px]" />
                 </div>
                 <div className="px-[16px]">
-                    <div className="flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
+                    <div className="cursor-pointer flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
                         <span>Devops</span>
                         <div className="text-[0.7rem] px-[8px] py-[4px] bg-[#ffffff05] border border-border w-fit rounded-full">+480</div>
                     </div>
-                    <div className="flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
+                    <div className="cursor-pointer flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
                         <span>JavaScript</span>
                         <div className="text-[0.7rem] px-[8px] py-[4px] bg-[#ffffff05] border border-border w-fit rounded-full">+287</div>
                     </div>
-                    <div className="flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
+                    <div className="cursor-pointer flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
                         <span>Linux</span>
                         <div className="text-[0.7rem] px-[8px] py-[4px] bg-[#ffffff05] border border-border w-fit rounded-full">+246</div>
                     </div>
-                    <div className="flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
+                    <div className="cursor-pointer flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
                         <span>Web Development</span>
                         <div className="text-[0.7rem] px-[8px] py-[4px] bg-[#ffffff05] border border-border w-fit rounded-full">+239</div>
                     </div>
-                    <div className="flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
+                    <div className="cursor-pointer flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
                         <span>TrainWithShubHarm</span>
                         <div className="text-[0.7rem] px-[8px] py-[4px] bg-[#ffffff05] border border-border w-fit rounded-full">+151</div>
                     </div>
-                    <div className="flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
+                    <div className="cursor-pointer flex items-center justify-between p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
                         <span>Programming</span>
                         <div className="text-[0.7rem] px-[8px] py-[4px] bg-[#ffffff05] border border-border w-fit rounded-full">+146</div>
                     </div>
-                    <div className="flex items-center p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
+                    <div className="cursor-pointer flex items-center p-1 rounded-lg hover:bg-[#afcfff10] cursor-pointer">
                         <span className="mr-2">See all</span>
                         <SeeAllIcon />
                     </div>

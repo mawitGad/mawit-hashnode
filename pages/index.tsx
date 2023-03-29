@@ -1,13 +1,14 @@
-import { logo_dark } from "@/assets/logos";
-import Image from "next/image";
+import Header from "@/components/header/header";
+import { cn } from "@/utils";
+import { Inter } from "next/font/google"
 
-
+const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
     return (
         <>
-            <main className="relative w-screen h-screen bg-background">
-
+            <main className={cn(inter.className, "relative w-screen h-screen bg-background text-[1rem]")}>
+                <Header />
             </main>
         </>
     )

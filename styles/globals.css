@@ -5,6 +5,7 @@ body {
 
 
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,5 +24,8 @@ body {
         --twitter-color : #1DA1F2;
         --green : #14532D;
         --canvas-data :  #95A3B8;
+        --my-feed-blue : #3C82F6;
+        --rix-gray : #CBD5E2;
+        --header-write-color : #2563EB;
     }
 }

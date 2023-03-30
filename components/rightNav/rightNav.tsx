@@ -154,7 +154,7 @@ export function RightNav() {
                 <div className="py-[16px] border-b-[1px] border-border flex">
                     <div>
                         <span className="cursor-pointer" >#2articles1week Challenge</span>
-                        <p className="cursor-pointer text-gray_shade text-[0.8rem]">Become better at technical writing; accept Hashnode's writing challenge for four weeks.</p>
+                        <p className="cursor-pointer text-gray_shade text-[0.8rem]">Become better at technical writing; accept Hashnode&apos;s writing challenge for four weeks.</p>
                     </div>
                     <Image src={chall1} alt="challenge one" width={64} height={64} className="cursor-pointer w-[64px] h-[64px] ml-4" />
                 </div>
@@ -182,7 +182,7 @@ export function RightNav() {
                 <div className="py-[16px] border-b-[1px] border-border flex">
                     <div>
                         <span className="cursor-pointer" >#WordWarrior</span>
-                        <p className="cursor-pointer text-gray_shade text-[0.8rem]">Write an in-depth article on your Hashnode blog that's more than 2000 words and become a word warrior!</p>
+                        <p className="cursor-pointer text-gray_shade text-[0.8rem]">Write an in-depth article on your Hashnode blog that&apos;s more than 2000 words and become a word warrior!</p>
                     </div>
                     <Image src={chall5} alt="challenge one" width={64} height={64} className="cursor-pointer w-[64px] h-[64px] ml-4" />
                 </div>

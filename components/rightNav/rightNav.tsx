@@ -4,14 +4,18 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import Image from "next/image";
 import { avatar28, avatar29, avatar30 } from "@/assets/avatars"
 import { chall1, chall2, chall3, chall4, chall5 } from "@/assets/challenges";
+import useRightNav from "@/hooks/useRightNav";
+
 
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] })
 
 export function RightNav() {
 
+    const { } = useRightNav()
+
     return (
-        <div className="max-w-[372px] ">
+        <div className="max-[1023px]:hidden w-full col-span-3">
             <div className="bg-component_background border-border border py-[20px] px-[20px] rounded-[8px]">
                 <div className="flex items-center justify-between">
                     <span className={cn(jakarta.className, "text-[1.2rem] font-bold")}>Blog Stats</span>
@@ -31,6 +35,7 @@ export function RightNav() {
                     <div className="grow grid place-items-center p-[8px]">7 Days</div>
                     <div className="grow grid place-items-center p-[8px]">30 Days</div>
                 </div>
+                <canvas id="canvas" className="w-full h-[181px]"></canvas>
             </div>
             <div className="my-[20px] bg-component_background border-border border py-[20px] px-[20px] rounded-[8px]">
                 <div className="flex items-center justify-between mb-6">

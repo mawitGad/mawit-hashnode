@@ -27,3 +27,5 @@ export const avatar27 = "/avatars/avatar-27.png";
 export const avatar28 = "/avatars/avatar-28.png";
 export const avatar29 = "/avatars/avatar-29.png";
 export const avatar30 = "/avatars/avatar-30.png";
+
+export const blogAvatar1 = "/avatars/blog-avatar-1.png";

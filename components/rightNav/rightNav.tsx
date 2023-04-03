@@ -35,7 +35,7 @@ export function RightNav() {
                     <div className="grow grid place-items-center p-[8px]">7 Days</div>
                     <div className="grow grid place-items-center p-[8px]">30 Days</div>
                 </div>
-                <canvas id="canvas" className="w-full h-[181px]"></canvas>
+                <canvas id="canvas" className=" border"></canvas>
             </div>
             <div className="my-[20px] bg-component_background border-border border py-[20px] px-[20px] rounded-[8px]">
                 <div className="flex items-center justify-between mb-6">

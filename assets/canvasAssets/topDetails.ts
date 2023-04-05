@@ -10,6 +10,7 @@ export class TopDetails {
 		const ctx = this.canvas.getContext("2d") as CanvasRenderingContext2D;
 
 		ctx.font = "14px sans-serif";
+		ctx.fillStyle = "#95A3B8";
 		ctx.fillText("Pageviews", canvasCenterX, 19);
 		ctx.fillRect(canvasCenterX - this.widthPercentile(20) - 10, 10, this.widthPercentile(20), 10);
 	}

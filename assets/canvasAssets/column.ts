@@ -1,21 +1,24 @@
+import { Details } from "./details";
+
 export class Column {
-	private position: number;
+	position: number;
 	private xInitialPosition: number;
 	private yInitialPosition: number;
-	private colWidth: number;
+	colWidth: number;
 	private colHeightUnit: number;
 	private ctx: CanvasRenderingContext2D;
-	private maxColHeight: number;
+	maxColHeight: number;
 	private canvasHeight: number;
 	private canvasWidth: number;
 	private canvas: HTMLCanvasElement;
-	private x: number;
-	private y: number;
+	x: number;
+	y: number;
 	private width: number;
 	private height: number;
 	private event_listener_callback: ((e: MouseEvent) => void) | null;
+	private column_details: Details;
 
-	constructor(canvas: HTMLCanvasElement, position: number, numberOfCols: number, maxColHeight: number) {
+	constructor(canvas: HTMLCanvasElement, position: number, numberOfCols: number, maxColHeight: number, details: Details) {
 		this.ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
 		this.canvasHeight = canvas.height;
 		this.canvasWidth = canvas.width;
@@ -31,9 +34,12 @@ export class Column {
 		this.width = 0;
 		this.height = 0;
 		this.event_listener_callback = null;
+		this.column_details = details;
+		this.subscribe_to_mouse_move_events();
 	}
 
 	render() {
+		this.ctx.fillStyle = "#95A3B8";
 		this.x = this.xInitialPosition + this.colWidth * this.position;
 		this.y = this.yInitialPosition - this.colHeightUnit * this.maxColHeight;
 		this.width = this.colWidth - 10;
@@ -51,11 +57,11 @@ export class Column {
 
 	subscribe_to_mouse_move_events() {
 		this.event_listener_callback = this.handleMouseMove.bind(this);
-		window.addEventListener("click", this.event_listener_callback);
+		window.addEventListener("mousemove", this.event_listener_callback);
 	}
 
 	unsubscribe_to_mouse_move_events() {
-		if (this.event_listener_callback) window.removeEventListener("click", this.event_listener_callback);
+		if (this.event_listener_callback) window.removeEventListener("mousemove", this.event_listener_callback);
 	}
 
 	private widthPercentile(percentage: number): number {
@@ -86,7 +92,9 @@ export class Column {
 		}
 
 		if (is_beyond_x_start() && is_before_x_end() && is_beyond_y_start() && is_before_y_end()) {
-			console.log("you clicked inside the column with max height of: " + this.maxColHeight);
+			this.column_details.subscribe(this);
+		} else {
+			this.column_details.unsubscribe(this);
 		}
 	}
 }

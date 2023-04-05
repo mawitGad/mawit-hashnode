@@ -1,23 +1,26 @@
 import { Column } from "./column";
+import { Details } from "./details";
 
 export class Columns {
 	canvas: HTMLCanvasElement;
 	columnHeights: number[];
 	columns: Column[];
+	column_details: Details;
 
 	constructor(canvas: HTMLCanvasElement, columns: number[]) {
 		this.canvas = canvas;
 		this.columnHeights = columns;
-		this.columns = [];
+		this.column_details = new Details(canvas);
+		this.columns = columns.map((number, index) => {
+			return new Column(this.canvas, index, columns.length, number, this.column_details);
+		});
 	}
 
 	render() {
-		for (let i = 0; i < this.columnHeights.length; i++) {
-			const column = new Column(this.canvas, i, this.columnHeights.length, this.columnHeights[i]);
+		this.columns.forEach((column) => {
 			column.render();
-			this.columns.push(column);
-			column.subscribe_to_mouse_move_events();
-		}
+		});
+		this.column_details.render();
 	}
 
 	unsubscribe_to_mouse_move_events() {

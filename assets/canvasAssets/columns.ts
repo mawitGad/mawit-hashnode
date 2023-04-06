@@ -28,4 +28,10 @@ export class Columns {
 			column.unsubscribe_to_mouse_move_events();
 		});
 	}
+
+	refresh_x_initial_variables() {
+		this.columns.forEach((column) => {
+			column.refresh_x_initial_variables();
+		});
+	}
 }

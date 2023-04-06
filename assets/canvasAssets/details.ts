@@ -33,24 +33,48 @@ export class Details {
 		const half_height = this.height / 2;
 		const column_width = this.column.colWidth - 5;
 		const half_column_width = column_width / 2;
-		let offset = 0;
+		let x_offset = 0;
+
 		set_x_velocity.bind(this)();
 		set_y_velocity.bind(this)();
-		set_offset.bind(this)();
-
+		set_x_offset.bind(this)();
+		calculate_and_set_coordinates.bind(this)();
 		render_details_container.bind(this)();
 		render_details_text.bind(this)();
 		render_details_text_box.bind(this)();
 		render_left_pointer_triangle.bind(this)();
 		render_right_pointer_triangle.bind(this)();
 
+		function set_x_velocity(this: Details) {
+			if (this.x_velocity !== null) return;
+			if (!this.column) return;
+			const distance = this.column.x - (this.x_position || 0);
+			this.x_velocity = distance / this.duration_in_cycles;
+		}
+		function set_y_velocity(this: Details) {
+			if (this.y_velocity !== null) return;
+			if (!this.column) return;
+			const distance = this.column.y - (this.y_position || 0);
+			this.y_velocity = distance / this.duration_in_cycles;
+		}
+		function set_x_offset(this: Details) {
+			if (!this.column) return;
+			if (this.canvas.width - this.column.x < this.width) {
+				if (this.column.x < this.width) {
+					x_offset = this.width / 2;
+				} else {
+					x_offset = this.width + 5;
+				}
+			} else {
+				x_offset = 0;
+			}
+		}
 		function render_details_container(this: Details) {
 			if (!this.column) return;
 
 			this.ctx.fillStyle = container_fill_style;
-			calculate_and_set_coordinates.bind(this)();
 			this.ctx.beginPath();
-			this.ctx.roundRect(this.x_position - offset + half_column_width, this.y_position - half_height, this.width, this.height, 4);
+			this.ctx.roundRect(this.x_position - x_offset + half_column_width, this.y_position - half_height, this.width, this.height, 4);
 			this.ctx.fill();
 		}
 		function calculate_and_set_coordinates(this: Details) {
@@ -83,19 +107,19 @@ export class Details {
 			this.ctx.textBaseline = "top";
 			this.ctx.fillText(
 				"page views: " + this.column?.maxColHeight,
-				this.x_position + 25 - offset + half_column_width,
+				this.x_position + 25 - x_offset + half_column_width,
 				this.y_position + 30 - half_height
 			);
-			this.ctx.fillText("1 march", this.x_position + 5 - offset + half_column_width, this.y_position + 10 - half_height);
+			this.ctx.fillText("1 march", this.x_position + 5 - x_offset + half_column_width, this.y_position + 10 - half_height);
 		}
 		function render_details_text_box(this: Details) {
 			this.ctx.fillStyle = "#7994d1";
 			this.ctx.strokeStyle = "white";
-			this.ctx.fillRect(this.x_position + 5 - offset + half_column_width, this.y_position + 30 - half_height, 15, 15);
-			this.ctx.strokeRect(this.x_position + 5 - offset + half_column_width, this.y_position + 30 - half_height, 15, 15);
+			this.ctx.fillRect(this.x_position + 5 - x_offset + half_column_width, this.y_position + 30 - half_height, 15, 15);
+			this.ctx.strokeRect(this.x_position + 5 - x_offset + half_column_width, this.y_position + 30 - half_height, 15, 15);
 		}
 		function render_left_pointer_triangle(this: Details) {
-			if (offset !== 0) return;
+			if (x_offset !== 0) return;
 			this.ctx.fillStyle = container_fill_style;
 			this.ctx.beginPath();
 			this.ctx.moveTo(this.x_position - 5 + half_column_width, this.y_position + half_height - half_height);
@@ -105,7 +129,7 @@ export class Details {
 			this.ctx.fill();
 		}
 		function render_right_pointer_triangle(this: Details) {
-			if (offset !== this.width + 5) return;
+			if (x_offset !== this.width + 5) return;
 			this.ctx.fillStyle = container_fill_style;
 			this.ctx.beginPath();
 			this.ctx.moveTo(this.x_position + half_column_width, this.y_position + half_height - half_height);
@@ -113,30 +137,6 @@ export class Details {
 			this.ctx.lineTo(this.x_position - 5 + half_column_width, half_height + this.y_position + 5 - half_height);
 			this.ctx.closePath();
 			this.ctx.fill();
-		}
-		function set_x_velocity(this: Details) {
-			if (this.x_velocity !== null) return;
-			if (!this.column) return;
-			const distance = this.column.x - (this.x_position || 0);
-			this.x_velocity = distance / this.duration_in_cycles;
-		}
-		function set_y_velocity(this: Details) {
-			if (this.y_velocity !== null) return;
-			if (!this.column) return;
-			const distance = this.column.y - (this.y_position || 0);
-			this.y_velocity = distance / this.duration_in_cycles;
-		}
-		function set_offset(this: Details) {
-			if (!this.column) return;
-			if (this.canvas.width - this.column.x < this.width) {
-				if (this.column.x < this.width) {
-					offset = this.width / 2;
-				} else {
-					offset = this.width + 5;
-				}
-			} else {
-				offset = 0;
-			}
 		}
 	}
 	subscribe(column: Column) {

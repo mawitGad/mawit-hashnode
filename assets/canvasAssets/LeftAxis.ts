@@ -10,6 +10,7 @@ export class LeftAxis {
 	}
 	render() {
 		this.ctx.fillStyle = "#95A3B8";
+		this.ctx.textBaseline = "alphabetic";
 		this.ctx.fillText("3", 5, this.heightPercentile(45 / 3) * 0 + this.heightPercentile(25));
 		this.ctx.fillText("2", 5, this.heightPercentile(45 / 3) * 1 + this.heightPercentile(25));
 		this.ctx.fillText("1", 5, this.heightPercentile(45 / 3) * 2 + this.heightPercentile(25));

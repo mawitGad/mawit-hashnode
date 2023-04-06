@@ -17,6 +17,7 @@ export class Column {
 	private height: number;
 	private event_listener_callback: ((e: MouseEvent) => void) | null;
 	private column_details: Details;
+	private number_of_columns: number;
 
 	constructor(canvas: HTMLCanvasElement, position: number, numberOfCols: number, maxColHeight: number, details: Details) {
 		this.ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
@@ -36,6 +37,7 @@ export class Column {
 		this.event_listener_callback = null;
 		this.column_details = details;
 		this.subscribe_to_mouse_move_events();
+		this.number_of_columns = numberOfCols;
 	}
 
 	render() {
@@ -62,6 +64,12 @@ export class Column {
 
 	unsubscribe_to_mouse_move_events() {
 		if (this.event_listener_callback) window.removeEventListener("mousemove", this.event_listener_callback);
+	}
+
+	refresh_x_initial_variables() {
+		this.canvasWidth = this.canvas.width;
+		this.xInitialPosition = this.widthPercentile(10);
+		this.colWidth = this.widthPercentile(90 / this.number_of_columns);
 	}
 
 	private widthPercentile(percentage: number): number {

@@ -9,6 +9,7 @@ export class Canvas {
 	private topDetails: TopDetails;
 	private leftAxis: LeftAxis;
 	private columns: Columns;
+	private resize_callback: (e: UIEvent) => void;
 
 	constructor() {
 		this.canvas = document.getElementById("canvas") as HTMLCanvasElement;
@@ -18,6 +19,8 @@ export class Canvas {
 		this.topDetails = new TopDetails(this.canvas);
 		this.leftAxis = new LeftAxis(this.canvas);
 		this.setCanvasDimensions();
+		this.resize_callback = this.resize_canvas.bind(this);
+		window.addEventListener("resize", this.resize_callback);
 	}
 
 	render() {
@@ -31,6 +34,7 @@ export class Canvas {
 	close() {
 		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 		this.columns.unsubscribe_to_mouse_move_events();
+		window.removeEventListener("resize", this.resize_callback);
 	}
 
 	private setCanvasDimensions() {
@@ -38,5 +42,10 @@ export class Canvas {
 		this.canvas.width = (19.95249406175772 / 100) * this.container.clientWidth;
 		this.canvas.style.height = 150 + "px";
 		this.canvas.style.width = (19.95249406175772 / 100) * this.container.clientWidth + "px";
+	}
+
+	private resize_canvas() {
+		this.columns.refresh_x_initial_variables();
+		this.setCanvasDimensions();
 	}
 }

@@ -211,7 +211,7 @@ export function MiddleSection() {
                                 </div>
                             </div>
                             <p className="cursor-pointer text-gray_shade">
-                                TL;DR - I just released the first version of a new kind of testing framework, called Sundew. It's early days, but if you're ready to try something new in the world of testing, you should check it out!…
+                                TL;DR - I just released the first version of a new kind of testing framework, called Sundew. It&apos;'s early days, but if you&apos;'re ready to try something new in the world of testing, you should check it out!…
                             </p>
                         </div>
                         <div className="text-gray_shade items-center max-[767px]:flex max-[767px]:mt-6 hidden">
@@ -404,7 +404,7 @@ export function MiddleSection() {
                                 </div>
                             </div>
                             <p className="cursor-pointer text-gray_shade">
-                                Hello everyone 👋🏾 Welcome, in today’s post we’ll be learning about comments in JavaScript. We would learn how, when and where to write comments and some of the best practices when writing comments a…
+                                Hello everyone 👋🏾 Welcome, in today&apos;’s post we&apos;’ll be learning about comments in JavaScript. We would learn how, when and where to write comments and some of the best practices when writing comments a…
                             </p>
                         </div>
                         <div className="text-gray_shade items-center max-[767px]:flex max-[767px]:mt-6 hidden">
@@ -623,7 +623,7 @@ export function MiddleSection() {
                                 </div>
                             </div>
                             <p className="cursor-pointer text-gray_shade">
-                                We're going to create a full-stack react application with CRUD features, in a series of blogs. In this blog, we will learn to create a basic front end for our application.Before starting out, let's t…
+                                We&apos;'re going to create a full-stack react application with CRUD features, in a series of blogs. In this blog, we will learn to create a basic front end for our application.Before starting out, let&apos;'s t…
                             </p>
                         </div>
                         <div className="text-gray_shade items-center max-[767px]:flex max-[767px]:mt-6 hidden">

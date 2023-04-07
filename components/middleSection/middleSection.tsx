@@ -211,7 +211,7 @@ export function MiddleSection() {
                                 </div>
                             </div>
                             <p className="cursor-pointer text-gray_shade">
-                                TL;DR - I just released the first version of a new kind of testing framework, called Sundew. It&apos;'s early days, but if you&apos;'re ready to try something new in the world of testing, you should check it out!…
+                                TL;DR - I just released the first version of a new kind of testing framework, called Sundew. It&apos;s early days, but if you&apos;re ready to try something new in the world of testing, you should check it out!…
                             </p>
                         </div>
                         <div className="text-gray_shade items-center max-[767px]:flex max-[767px]:mt-6 hidden">
@@ -623,7 +623,7 @@ export function MiddleSection() {
                                 </div>
                             </div>
                             <p className="cursor-pointer text-gray_shade">
-                                We&apos;'re going to create a full-stack react application with CRUD features, in a series of blogs. In this blog, we will learn to create a basic front end for our application.Before starting out, let&apos;'s t…
+                                We&apos;re going to create a full-stack react application with CRUD features, in a series of blogs. In this blog, we will learn to create a basic front end for our application.Before starting out, let&apos;s t…
                             </p>
                         </div>
                         <div className="text-gray_shade items-center max-[767px]:flex max-[767px]:mt-6 hidden">
